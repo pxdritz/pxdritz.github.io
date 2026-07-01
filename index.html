@@ -15,14 +15,23 @@
   <link rel="icon" href="assets/oc-icon.png">
 </head>
 <body>
-  <!-- Simple top navigation -->
-  <nav class="site-nav" aria-label="Navegação principal">
-    <div class="nav-inner">
+ <!-- Top widget-island navigation (substitua o bloco <nav> existente por este) -->
+<nav class="site-nav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <div class="nav-island" role="navigation" aria-label="Widget de navegação">
+      <a class="nav-brand" href="/" aria-label="Página inicial">
+        <img src="assets/oc-icon.png" alt="pxdritz" width="28" height="28">
+        <span style="font-weight:700;color:var(--text);font-size:14px">pxdritz</span>
+      </a>
+
       <a href="#sobre" class="nav-link">sobre</a>
       <a href="#projetos" class="nav-link">projetos</a>
       <a href="#galeria" class="nav-link">galeria</a>
       <a href="#contato" class="nav-link">contato</a>
       <a href="https://github.com/pxdritz" target="_blank" rel="noopener" class="nav-link nav-ghost">GitHub</a>
+    </div>
+  </div>
+</nav>
     </div>
   </nav>
 
