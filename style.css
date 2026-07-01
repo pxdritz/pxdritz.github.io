@@ -12,9 +12,11 @@
   --accent-2: #8fbf9f; /* soft green */
   --glass: rgba(255,255,255,0.7);
   --shadow: 0 8px 24px rgba(16,24,32,0.06);
+  --shadow-strong: 0 14px 40px rgba(18,32,40,0.08);
   --radius: 14px;
   --radius-sm: 8px;
   --container-width: 980px;
+  --dots: rgba(18,32,40,0.03);
 }
 
 /* Base */
@@ -24,7 +26,12 @@ body{
   margin:0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color:var(--text);
-  background: linear-gradient(180deg,var(--bg),#eef3f4 120%);
+  /* subtle dotted texture over the soft gradient */
+  background-image:
+    radial-gradient(circle, var(--dots) 1px, transparent 1px),
+    linear-gradient(180deg,var(--bg),#eef3f4 120%);
+  background-size: 12px 12px, auto;
+  background-repeat: repeat, no-repeat;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.55;
@@ -41,9 +48,42 @@ img{max-width:100%;display:block}
   *{animation:none!important;transition-duration:0s!important}
 }
 
+/* Top navigation — centered widget island */
+.site-nav{
+  display:flex;
+  justify-content:center;
+  padding:22px 20px 0;
+}
+.nav-inner{
+  width:100%;
+  max-width:var(--container-width);
+  display:flex;
+  justify-content:center;
+}
+.nav-island{
+  display:inline-flex;
+  gap:18px;
+  align-items:center;
+  padding:10px 18px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(250,251,252,0.95));
+  border:1px solid rgba(16,24,32,0.04);
+  box-shadow:var(--shadow-strong);
+  backdrop-filter: blur(6px) saturate(115%);
+}
+.nav-brand{
+  display:flex;align-items:center;gap:8px;margin-right:6px;padding-right:6px;border-right:1px solid rgba(16,24,32,0.03);
+}
+.nav-brand img{width:28px;height:28px;border-radius:6px;display:block}
+.nav-link{
+  font-weight:600;color:var(--text);padding:8px 10px;border-radius:8px;font-size:14px;display:inline-block;
+}
+.nav-link:hover{background:rgba(18,32,40,0.02)}
+.nav-ghost{color:var(--accent-2);font-weight:700}
+
 /* Site hero */
 .site-hero{
-  padding:56px 20px;
+  padding:36px 20px 56px; /* slightly shorter to accommodate nav widget */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -101,7 +141,7 @@ img{max-width:100%;display:block}
 
 /* Gallery */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
-.frame{background:var(--surface);border-radius:12px;padding:8px;border:1px solid rgba(16,24,32,0.04);cursor:pointer;display:flex;flex-direction:column;gap:8px;align-items:stretch;transition:transform .18s ease,box-shadow .18s ease}
+.frame{background:var(--surface);border-radius:12px;padding:8px;border:1px solid rgba(16,24,32,0.04);cursor:pointer;display:flex;flex-direction:column;gap:8px;align-items:stretch;transition:transform .18s ease, box-shadow .18s ease}
 .frame img{width:100%;height:160px;object-fit:cover;border-radius:8px}
 .frame:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(18,32,40,0.06)}
 .caption{font-size:13px;color:var(--muted);text-align:left}
@@ -110,6 +150,10 @@ img{max-width:100%;display:block}
 .contacts{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-direction:column;gap:8px}
 .contacts a{color:var(--accent);font-weight:600}
 .note{color:var(--muted);font-size:13px;margin-top:12px}
+
+/* Footer */
+.site-footer{max-width:var(--container-width);margin:24px auto;padding:18px 20px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,251,252,0.96));box-shadow:var(--shadow);border:1px solid rgba(16,24,32,0.03);text-align:center;color:var(--muted);font-size:13px}
+.site-footer a{color:var(--accent);font-weight:600}
 
 /* Lightbox */
 .lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,8,0.6);z-index:80;opacity:0;pointer-events:none;transition:opacity .2s ease}
@@ -131,6 +175,8 @@ img{max-width:100%;display:block}
   .gallery{grid-template-columns:1fr}
   .avatar{width:96px;height:96px}
   .hero-text h1{font-size:20px}
+  .nav-island{padding:10px 12px;gap:10px}
+  .nav-brand{display:none}
 }
 
 /* Small utilities */
