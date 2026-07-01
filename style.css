@@ -1,27 +1,27 @@
 /* ============================================
-   pxdritz.github.io — Webcore Green / Terminal OS
-   Palette: Phosphorus Green, Cyber Lime & Matrix Dark
+   pxdritz.github.io — Retro 90s Green Terminal
+   Palette: Lime Green, Neon Green & Dark Gray
    ============================================ */
 
 :root {
-  /* Webcore Dark & Green Palette */
-  --bg-darker: #060a07;
-  --bg-desktop: #0a120c;
+  /* Retro 90s Dark Palette */
+  --bg-darker: #1a1a1a;
+  --bg-desktop: #0d5f2d;
   
-  --win-bg: #101c13;
-  --win-border-hi: #223d29;
-  --win-border-lo: #040705;
+  --win-bg: #c0c0c0;
+  --win-border-hi: #dfdfdf;
+  --win-border-lo: #808080;
   
-  --text-main: #d2ebd7;
-  --text-muted: #6b8f72;
+  --text-main: #000000;
+  --text-muted: #404040;
   
-  /* Webcore Highlights */
-  --phosphor-green: #4eff7c;
-  --cyber-lime: #a3ff1a;
+  /* Retro Green Highlights */
+  --neon-green: #00ff00;
+  --lime-bright: #00ff7f;
   --alert-orange: #ff8800;
-  --glitch-purple: #bd5eff;
+  --glitch-purple: #ff00ff;
 
-  --font-mono: 'VT323', 'Courier New', monospace;
+  --font-mono: 'MS Sans Serif', 'Courier New', monospace;
 }
 
 * { box-sizing: border-box; }
@@ -29,20 +29,18 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background-color: var(--bg-darker);
-  /* Textura de Scanlines CRT e Grid Webcore Verde */
+  background-color: var(--bg-desktop);
   background-image: 
-    linear-gradient(rgba(10, 18, 12, 0.96), rgba(10, 18, 12, 0.96)),
-    repeating-linear-gradient(0deg, rgba(78, 255, 124, 0.03) 0px, rgba(78, 255, 124, 0.03) 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(90deg, rgba(78, 255, 124, 0.01) 0px, rgba(78, 255, 124, 0.01) 32px, transparent 32px, transparent 64px);
+    repeating-linear-gradient(0deg, rgba(0, 255, 0, 0.15) 0px, rgba(0, 255, 0, 0.15) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(90deg, rgba(0, 255, 127, 0.08) 0px, rgba(0, 255, 127, 0.08) 4px, transparent 4px, transparent 8px);
   color: var(--text-main);
   font-family: var(--font-mono);
   font-size: 21px;
   line-height: 1.4;
 }
 
-a { color: var(--phosphor-green); text-decoration: none; }
-a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
+a { color: var(--neon-green); text-decoration: underline; }
+a:hover { color: var(--lime-bright); text-shadow: 0 0 8px var(--lime-bright); }
 
 /* ---------- Desktop Shell Structure ---------- */
 .desktop-grid {
@@ -61,20 +59,25 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 
 /* ---------- Hero Bios (DOS Boot Concept) ---------- */
 .hero-bios {
-  background: #030504;
-  border: 3px double var(--win-border-hi);
+  background: #c0c0c0;
+  border: 3px double;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
   margin: 40px auto 20px;
   padding: 24px;
   max-width: 860px;
   width: calc(100% - 40px);
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.9);
+  box-shadow: inset 0 0 0 1px #dfdfdf;
 }
 
 .bios-title {
   font-size: 46px;
-  color: var(--phosphor-green);
+  color: var(--neon-green);
   margin: 12px 0;
-  text-shadow: 0 0 5px rgba(78, 255, 124, 0.4);
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.6);
+  font-weight: bold;
 }
 
 .bios-sub {
@@ -98,16 +101,16 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 /* ---------- Retro Window Containers (Windows 9x UI) ---------- */
 .win-window {
   background: var(--win-bg);
-  border-top: 3px solid var(--win-border-hi);
-  border-left: 3px solid var(--win-border-hi);
-  border-right: 3px solid var(--win-border-lo);
-  border-bottom: 3px solid var(--win-border-lo);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   margin-bottom: 40px;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 0 0 #dfdfdf, 2px 2px 0 0 #808080;
 }
 
 .win-header {
-  background: linear-gradient(90deg, #162b1d, #060c08);
+  background: linear-gradient(90deg, #000080, #1084d7);
   padding: 6px 12px;
   display: flex;
   justify-content: space-between;
@@ -118,7 +121,7 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 .win-title {
   font-size: 18px;
   font-weight: bold;
-  color: var(--cyber-lime);
+  color: #ffffff;
   letter-spacing: 0.5px;
 }
 
@@ -134,6 +137,7 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
   font-size: 14px;
   margin-left: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .close-btn:hover {
@@ -155,38 +159,49 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 /* ---------- Windows Buttons Elements ---------- */
 .win-btn {
   display: inline-block;
-  background: #152419;
+  background: var(--win-bg);
   border-top: 2px solid var(--win-border-hi);
   border-left: 2px solid var(--win-border-hi);
   border-right: 3px solid var(--win-border-lo);
   border-bottom: 3px solid var(--win-border-lo);
-  color: var(--cyber-lime);
+  color: var(--text-main);
   padding: 8px 16px;
   cursor: pointer;
   font-size: 19px;
   margin-right: 12px;
+  font-weight: bold;
 }
 
 .win-btn:hover {
-  background: #1c3323;
-  text-shadow: 0 0 5px var(--cyber-lime);
+  background: #e0e0e0;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.win-btn:active {
+  border-top-color: var(--win-border-lo);
+  border-left-color: var(--win-border-lo);
+  border-right-color: var(--win-border-hi);
+  border-bottom-color: var(--win-border-hi);
 }
 
 .win-btn--alert {
   color: var(--alert-orange);
 }
 .win-btn--alert:hover {
-  text-shadow: 0 0 5px var(--alert-orange);
+  background: #e0e0e0;
 }
 
 .win-link-btn {
   display: block;
   text-align: center;
-  background: #0a120c;
+  background: var(--win-bg);
   border: 1px solid var(--win-border-hi);
   padding: 6px;
   margin-top: auto;
   font-size: 18px;
+  color: var(--neon-green);
+  font-weight: bold;
 }
 
 /* ---------- About Content Architecture ---------- */
@@ -197,8 +212,11 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 }
 
 .profile-sidebar {
-  background: #0b140e;
-  border: 2px dashed var(--win-border-hi);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 16px;
   text-align: center;
 }
@@ -207,31 +225,40 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
   width: 120px;
   height: 120px;
   margin: 0 auto 12px;
-  border: 2px solid var(--win-border-lo);
-  background: var(--bg-darker);
+  border: 2px solid;
+  border-top-color: var(--win-border-hi);
+  border-left-color: var(--win-border-hi);
+  border-right-color: var(--win-border-lo);
+  border-bottom-color: var(--win-border-lo);
+  background: var(--win-bg);
 }
 .oc-icon-frame img { width: 100%; height: 100%; object-fit: cover; }
 
 .nick { font-weight: bold; color: var(--text-main); }
-.pronouns { color: var(--cyber-lime); font-size: 18px; margin-bottom: 12px; }
+.pronouns { color: var(--neon-green); font-size: 18px; margin-bottom: 12px; font-weight: bold; }
 
 .sys-info { text-align: left; font-size: 17px; }
 .stat-row {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #142419;
+  border-bottom: 1px solid #dfdfdf;
   padding: 4px 0;
 }
-.stat-row span:first-child { color: var(--text-muted); }
+.stat-row span:first-child { color: var(--text-muted); font-weight: bold; }
+.stat-row span:last-child { color: var(--neon-green); }
 
 .pixel-tag {
   display: inline-block;
-  background: #0d1911;
-  border: 1px solid var(--win-border-hi);
+  background: #c0c0c0;
+  border-top: 1px solid var(--win-border-hi);
+  border-left: 1px solid var(--win-border-hi);
+  border-right: 1px solid var(--win-border-lo);
+  border-bottom: 1px solid var(--win-border-lo);
   padding: 2px 8px;
   font-size: 16px;
   margin-right: 6px;
-  color: var(--text-muted);
+  color: var(--neon-green);
+  font-weight: bold;
 }
 
 /* ---------- Inventory & Progress Bars ---------- */
@@ -242,8 +269,11 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 }
 
 .skill-item {
-  background: #0d1911;
-  border: 1px solid var(--win-border-hi);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 14px;
 }
 
@@ -251,19 +281,22 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  color: var(--phosphor-green);
+  color: var(--neon-green);
 }
 
 .progress-bar {
   height: 12px;
-  background: var(--bg-darker);
-  border: 1px solid var(--win-border-lo);
+  background: var(--win-bg);
+  border-top: 1px solid var(--win-border-hi);
+  border-left: 1px solid var(--win-border-hi);
+  border-right: 1px solid var(--win-border-lo);
+  border-bottom: 1px solid var(--win-border-lo);
   margin: 6px 0;
 }
 .progress-bar .fill {
   height: 100%;
-  background: var(--phosphor-green);
-  box-shadow: 0 0 8px var(--phosphor-green);
+  background: var(--neon-green);
+  box-shadow: inset 0 0 3px rgba(0, 255, 0, 0.4);
 }
 
 .sub-text { margin: 0; font-size: 16px; color: var(--text-muted); }
@@ -276,19 +309,22 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 }
 
 .project-folder {
-  background: #0d1911;
-  border: 1px solid var(--win-border-hi);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 16px;
   display: flex;
   flex-direction: column;
 }
 
 .folder-icon { font-size: 32px; margin-bottom: 6px; }
-.project-folder h3 { margin: 0 0 8px; font-size: 20px; color: var(--text-main); }
+.project-folder h3 { margin: 0 0 8px; font-size: 20px; color: var(--text-main); font-weight: bold; }
 .project-folder p { font-size: 17px; color: var(--text-muted); flex-grow: 1; margin: 0 0 12px; }
 
 .folder-meta { margin-bottom: 12px; display: flex; gap: 6px; }
-.folder-meta span { font-size: 14px; background: var(--bg-darker); padding: 1px 6px; color: var(--glitch-purple); }
+.folder-meta span { font-size: 14px; background: var(--win-bg); padding: 1px 6px; color: var(--neon-green); border: 1px solid #dfdfdf; font-weight: bold; }
 
 /* ---------- Webcore System Gallery ---------- */
 .webcore-gallery {
@@ -298,24 +334,28 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 }
 
 .gallery-frame {
-  background: #0a120c;
-  border: 1px solid var(--win-border-hi);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 8px;
   cursor: pointer;
   transition: transform 0.1s ease;
 }
 .gallery-frame:hover {
   transform: scale(1.03);
-  border-color: var(--phosphor-green);
+  border-top-color: var(--neon-green);
+  border-left-color: var(--neon-green);
 }
 
 .img-wrap {
   aspect-ratio: 16/10;
   overflow: hidden;
   background: #000;
-  border: 1px solid var(--win-border-lo);
+  border: 2px solid #000;
 }
-.img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.8) sepia(0.2) hue-rotate(60deg); }
+.img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.9) sepia(0.1) hue-rotate(-30deg); }
 
 .frame-label {
   text-align: center;
@@ -325,12 +365,16 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: bold;
 }
 
 /* ---------- Contact Terminal UI ---------- */
 .contact-terminal {
-  background: #040805;
-  border: 1px solid var(--win-border-lo);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -341,48 +385,59 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 .term-link {
   display: block;
   font-size: 22px;
+  color: var(--neon-green);
+  font-weight: bold;
 }
-.term-head { color: var(--alert-orange); }
-.term-val { color: var(--text-main); }
+.term-head { color: var(--text-main); font-weight: bold; }
+.term-val { color: var(--neon-green); font-weight: bold; }
 
 .alert-box {
-  border: 2px solid var(--alert-orange);
-  background: #24140b;
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
+  background: var(--win-bg);
 }
 .alert-header {
-  background: var(--alert-orange);
-  color: #000;
+  background: linear-gradient(90deg, #000080, #1084d7);
+  color: #ffffff;
   padding: 4px 12px;
   font-weight: bold;
   font-size: 17px;
 }
 .alert-content { padding: 16px; }
-.alert-content p { margin: 0 0 14px; color: var(--text-main); }
+.alert-content p { margin: 0 0 14px; color: var(--neon-green); font-weight: bold; }
 
 /* ---------- Taskbar Bottom Navigation ---------- */
 .taskbar {
   position: fixed;
   bottom: 0; left: 0; right: 0;
   height: 44px;
-  background: #111f15;
-  border-top: 3px solid var(--win-border-hi);
+  background: #c0c0c0;
+  border-top: 2px solid var(--win-border-hi);
   display: flex;
   align-items: center;
   padding: 0 12px;
   z-index: 999;
+  box-shadow: inset 1px 1px 0 0 #dfdfdf, inset -1px -1px 0 0 #808080;
 }
 
 .start-btn {
-  background: linear-gradient(135deg, #1b3323, #0b140e);
+  background: var(--win-bg);
   border-top: 2px solid var(--win-border-hi);
   border-left: 2px solid var(--win-border-hi);
   border-right: 2px solid var(--win-border-lo);
   border-bottom: 2px solid var(--win-border-lo);
   padding: 2px 12px;
   font-weight: bold;
-  color: var(--phosphor-green);
+  color: var(--text-main);
   cursor: pointer;
   margin-right: 12px;
+  font-size: 16px;
+}
+
+.start-btn:hover {
+  background: #dfdfdf;
 }
 
 .taskbar-tabs {
@@ -393,47 +448,60 @@ a:hover { color: var(--cyber-lime); text-shadow: 0 0 8px var(--cyber-lime); }
 }
 
 .task-tab {
-  background: #070d09;
-  border: 1px solid var(--win-border-hi);
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
   padding: 2px 10px;
   font-size: 17px;
-  color: var(--text-muted);
+  color: var(--text-main);
   white-space: nowrap;
+  font-weight: bold;
 }
-.task-tab:hover { color: var(--phosphor-green); text-decoration: none; }
+.task-tab:hover { color: var(--neon-green); text-decoration: underline; }
 
 .system-tray {
   font-size: 16px;
-  color: var(--text-muted);
-  background: #050a07;
+  color: var(--text-main);
+  background: var(--win-bg);
   padding: 2px 8px;
-  border-left: 1px solid var(--win-border-lo);
-  border-top: 1px solid var(--win-border-lo);
-  border-right: 1px solid var(--win-border-hi);
-  border-bottom: 1px solid var(--win-border-hi);
+  border-left: 1px solid var(--win-border-hi);
+  border-top: 1px solid var(--win-border-hi);
+  border-right: 1px solid var(--win-border-lo);
+  border-bottom: 1px solid var(--win-border-lo);
+  font-weight: bold;
 }
 
 /* ---------- Lightbox & Utilities ---------- */
 .lightbox {
   position: fixed;
-  inset: 0; background: rgba(3, 5, 4, 0.96);
+  inset: 0; background: rgba(29, 95, 45, 0.92);
   display: none; align-items: center; justify-content: center;
   z-index: 9999; padding: 20px;
 }
 .lightbox.active { display: flex; }
 .lightbox img {
   max-width: 90vw; max-height: 75vh;
-  border: 3px solid var(--win-border-hi);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
 }
 .lightbox-close {
   position: absolute; top: 20px; right: 20px;
-  background: var(--win-bg); color: var(--alert-orange);
-  border: 1px solid var(--alert-orange); padding: 6px 12px;
+  background: var(--win-bg); color: var(--text-main);
+  border-top: 2px solid var(--win-border-hi);
+  border-left: 2px solid var(--win-border-hi);
+  border-right: 2px solid var(--win-border-lo);
+  border-bottom: 2px solid var(--win-border-lo);
+  padding: 6px 12px;
   font-family: var(--font-mono); cursor: pointer;
+  font-weight: bold;
 }
 
-.green-text { color: var(--phosphor-green); }
-.matrix-text { color: var(--cyber-lime); }
+.green-text { color: var(--neon-green); font-weight: bold; }
+.matrix-text { color: var(--lime-bright); font-weight: bold; }
 .blink { animation: web-blink 1s steps(2, start) infinite; }
 @keyframes web-blink { to { visibility: hidden; } }
 
