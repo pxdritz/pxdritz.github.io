@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — pxdritz</title>
+  <meta name="description" content="Projects, mods, and tools by pxdritz. Minecraft mods, modpacks, and development work." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/oc-icon.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-island" role="navigation" aria-label="Navigation widget">
+        <a class="nav-brand" href="/" aria-label="Home">
+          <img src="assets/oc-icon.png" alt="pxdritz" width="28" height="28">
+          <span>pxdritz</span>
+        </a>
+
+        <button id="nav-menu-btn" class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+        <div id="nav-links" class="nav-links">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="https://github.com/pxdritz" target="_blank" rel="noopener" class="nav-link nav-ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-hero">
+    <div class="hero-inner">
+      <h1>Projects</h1>
+      <p class="lead">Minecraft mods, modpacks, tools, and other development work.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="modrinth" class="card">
+      <div class="card-header">
+        <h2>Modrinth Projects</h2>
+        <a href="https://modrinth.com/user/pxotitas" target="_blank" rel="noopener" class="link">View profile →</a>
+      </div>
+      <p class="muted">All projects published under the <strong>pxotitas</strong> account on Modrinth.</p>
+      <div id="modrinth-projects" class="projects">
+        <div class="skeleton" style="height:200px;"></div>
+        <div class="skeleton" style="height:200px;"></div>
+        <div class="skeleton" style="height:200px;"></div>
+        <div class="skeleton" style="height:200px;"></div>
+      </div>
+    </section>
+
+    <section id="other" class="card">
+      <h2>Other Work</h2>
+      <div class="projects">
+        <article class="project">
+          <div>
+            <h3>EdonMe Studios</h3>
+            <p>Coordination of teams, processes, and deployments. Planning and execution of digital projects.</p>
+            <a href="https://edonme.dev" target="_blank" rel="noopener" class="link">visit EdonMe →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <h3>Tools & Scripts</h3>
+            <p>Utilities in Python and scripts used for automation and workflow improvements.</p>
+            <a href="https://github.com/pxdritz" target="_blank" rel="noopener" class="link">view on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <small>© pxdritz · 2026 — BSD 3 Clause.</small>
+      <span aria-hidden="true"> &nbsp;•&nbsp; </span>
+      <a href="https://github.com/pxdritz/pxdritz.github.io" target="_blank" rel="noopener">Source code</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

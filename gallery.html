@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — pxdritz</title>
+  <meta name="description" content="Gallery of wallpapers, commissions, and artwork by pxdritz." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/oc-icon.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-island" role="navigation" aria-label="Navigation widget">
+        <a class="nav-brand" href="/" aria-label="Home">
+          <img src="assets/oc-icon.png" alt="pxdritz" width="28" height="28">
+          <span>pxdritz</span>
+        </a>
+
+        <button id="nav-menu-btn" class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+        <div id="nav-links" class="nav-links">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="https://github.com/pxdritz" target="_blank" rel="noopener" class="nav-link nav-ghost">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-hero">
+    <div class="hero-inner">
+      <h1>Gallery</h1>
+      <p class="lead">Wallpapers, commissions, and artwork. Click any image to enlarge.</p>
+      <a href="https://wallhaven.cc/user/pxdritz/" target="_blank" rel="noopener" class="btn btn-ghost">View more on Wallhaven →</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="gallery" class="card">
+      <div class="gallery">
+        <button class="frame" data-full="assets/dragona.png" aria-label="Open image">
+          <img src="assets/dragona.png" alt="dragona">
+          <span class="caption">Dragona</span>
+        </button>
+
+        <button class="frame" data-full="assets/dragona_cute.png" aria-label="Open image">
+          <img src="assets/dragona_cute.png" alt="dragona cute">
+          <span class="caption">Dragona Cute</span>
+        </button>
+
+        <button class="frame" data-full="assets/joedio.png" aria-label="Open image">
+          <img src="assets/joedio.png" alt="joedio">
+          <span class="caption">Joedio</span>
+        </button>
+
+        <button class="frame" data-full="assets/jojo.png" aria-label="Open image">
+          <img src="assets/jojo.png" alt="jojo">
+          <span class="caption">JoJo</span>
+        </button>
+
+        <button class="frame" data-full="assets/jolyne.png" aria-label="Open image">
+          <img src="assets/jolyne.png" alt="jolyne">
+          <span class="caption">Jolyne</span>
+        </button>
+
+        <button class="frame" data-full="assets/madoka_lesbian_debian.png" aria-label="Open image">
+          <img src="assets/madoka_lesbian_debian.png" alt="madoka">
+          <span class="caption">Madoka Debian</span>
+        </button>
+
+        <button class="frame" data-full="assets/unitedtrans.png" aria-label="Open image">
+          <img src="assets/unitedtrans.png" alt="unitedtrans">
+          <span class="caption">United Trans</span>
+        </button>
+
+        <button class="frame" data-full="assets/vectorbloom_lain.png" aria-label="Open image">
+          <img src="assets/vectorbloom_lain.png" alt="vectorbloom lain">
+          <span class="caption">Vectorbloom Lain</span>
+        </button>
+
+        <button class="frame" data-full="assets/cujos.png" aria-label="Open image">
+          <img src="assets/cujos.png" alt="cujos">
+          <span class="caption">Cujos</span>
+        </button>
+
+        <button class="frame" data-full="assets/6e86120b-b056-46f7-978f-c517e3c1884e.png" aria-label="Open image">
+          <img src="assets/6e86120b-b056-46f7-978f-c517e3c1884e.png" alt="abstract wallpaper">
+          <span class="caption">Abstract</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged image">
+  </div>
+
+  <script src="main.js"></script>
+
+  <footer class="site-footer" role="contentinfo">
+    <div>
+      <small>© pxdritz · 2026 — BSD 3 Clause.</small>
+      <span aria-hidden="true"> &nbsp;•&nbsp; </span>
+      <a href="https://github.com/pxdritz/pxdritz.github.io" target="_blank" rel="noopener">Source code</a>
+    </div>
+  </footer>
+</body>
+</html>
