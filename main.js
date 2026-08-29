@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // Lightbox
+  
   function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -35,7 +35,7 @@
     });
   }
 
-  // Mobile menu
+  
   function initMobileMenu() {
     const btn = document.getElementById('nav-menu-btn');
     const links = document.getElementById('nav-links');
@@ -47,7 +47,7 @@
       btn.setAttribute('aria-expanded', String(expanded));
     });
 
-    // Close menu when a link is clicked
+    
     links.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         links.classList.remove('open');
@@ -56,7 +56,7 @@
     });
   }
 
-  // Active nav link
+  
   function initActiveNav() {
     const path = window.location.pathname;
     const page = path.split('/').pop() || 'index.html';
@@ -70,7 +70,7 @@
     });
   }
 
-  // Modrinth integration
+  
   async function initModrinth() {
     const container = document.getElementById('modrinth-projects');
     if (!container) return;
@@ -78,7 +78,7 @@
     container.innerHTML = Array(4).fill('<div class="skeleton" style="height:200px;"></div>').join('');
 
     try {
-      const res = await fetch('https://api.modrinth.com/v2/user/pxotitas/projects');
+      const res = await fetch('https:
       if (!res.ok) throw new Error('Failed to fetch Modrinth projects');
       const projects = await res.json();
       renderModrinthProjects(projects, container);
@@ -87,7 +87,7 @@
       container.innerHTML = `
         <div class="text-center" style="grid-column: 1 / -1; padding: 3rem 1rem;">
           <p style="color: var(--text-secondary); margin-bottom: 1rem;">Unable to load projects from Modrinth.</p>
-          <a href="https://modrinth.com/user/pxotitas" target="_blank" rel="noopener" class="btn btn-ghost">View on Modrinth</a>
+          <a href="https:
         </div>
       `;
     }
@@ -126,7 +126,7 @@
             ${loaders ? `<span class="tag">${loaders}</span>` : ''}
             ${tags}
           </div>
-          <a href="https://modrinth.com/project/${escapeHtml(project.slug)}" target="_blank" rel="noopener" class="link">View on Modrinth →</a>
+          <a href="https:
         </div>
       `;
 
@@ -140,7 +140,7 @@
     return div.innerHTML;
   }
 
-  // Initialize
+  
   document.addEventListener('DOMContentLoaded', () => {
     initLightbox();
     initMobileMenu();

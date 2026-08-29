@@ -50,7 +50,7 @@ body {
   flex-direction: column;
 }
 
-/* Scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -65,7 +65,7 @@ body {
   background: var(--text-secondary);
 }
 
-/* Typography */
+
 h1, h2, h3, h4 {
   font-family: 'Merriweather', Georgia, serif;
   font-weight: 700;
@@ -92,7 +92,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* Navigation */
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -195,7 +195,7 @@ a:hover {
   line-height: 1;
 }
 
-/* Hero */
+
 .site-hero {
   padding: 5rem 1rem 4rem;
   text-align: center;
@@ -251,7 +251,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -288,7 +288,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-/* Container */
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -296,7 +296,7 @@ a:hover {
   flex: 1;
 }
 
-/* Cards */
+
 .card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -322,7 +322,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* Gallery */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -380,7 +380,7 @@ a:hover {
   transform: translateY(0);
 }
 
-/* Lightbox */
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -441,7 +441,7 @@ a:hover {
   transform: rotate(90deg);
 }
 
-/* Projects */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -541,7 +541,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* About */
+
 .about-grid {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -591,7 +591,7 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-/* Contact */
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -639,7 +639,7 @@ a:hover {
   color: var(--text-secondary);
 }
 
-/* Footer */
+
 .site-footer {
   text-align: center;
   padding: 2.5rem 1rem;
@@ -661,7 +661,7 @@ a:hover {
   border-bottom-color: var(--accent);
 }
 
-/* Loading skeleton */
+
 .skeleton {
   background: linear-gradient(90deg, var(--border) 25%, transparent 50%, var(--border) 75%);
   background-size: 200% 100%;
@@ -674,7 +674,7 @@ a:hover {
   100% { background-position: -200% 0; }
 }
 
-/* Utility */
+
 .muted {
   color: var(--text-secondary);
   font-size: 0.9375rem;
@@ -686,7 +686,7 @@ a:hover {
 
 .mb-0 { margin-bottom: 0; }
 
-/* Mobile menu */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -757,7 +757,7 @@ a:hover {
   }
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -767,7 +767,7 @@ a:hover {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* Modrinth specific */
+
 .modrinth-card {
   position: relative;
   overflow: hidden;
@@ -789,19 +789,19 @@ a:hover {
   opacity: 1;
 }
 
-/* Section spacing */
+
 section {
   scroll-margin-top: 5rem;
 }
 
-/* Focus states for accessibility */
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Print styles */
+
 @media print {
   .site-nav,
   .site-footer,
