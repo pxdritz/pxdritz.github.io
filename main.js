@@ -78,7 +78,7 @@
     container.innerHTML = Array(4).fill('<div class="skeleton" style="height:200px;"></div>').join('');
 
     try {
-      const res = await fetch('https:
+      const res = await fetch('https://api.modrinth.com/v2/user/pxotitas/projects');
       if (!res.ok) throw new Error('Failed to fetch Modrinth projects');
       const projects = await res.json();
       renderModrinthProjects(projects, container);
@@ -87,7 +87,7 @@
       container.innerHTML = `
         <div class="text-center" style="grid-column: 1 / -1; padding: 3rem 1rem;">
           <p style="color: var(--text-secondary); margin-bottom: 1rem;">Unable to load projects from Modrinth.</p>
-          <a href="https:
+          <a href="https://modrinth.com/user/pxotitas" target="_blank" rel="noopener" class="link">View on Modrinth →</a>
         </div>
       `;
     }
@@ -126,7 +126,7 @@
             ${loaders ? `<span class="tag">${loaders}</span>` : ''}
             ${tags}
           </div>
-          <a href="https:
+          <a href="https://modrinth.com/project/${escapeHtml(project.slug)}" target="_blank" rel="noopener" class="link">View project →</a>
         </div>
       `;
 
