@@ -58,13 +58,10 @@
 
   
   function initActiveNav() {
-    const path = window.location.pathname;
-    const page = path.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
     document.querySelectorAll('.nav-link').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href && href.endsWith(page)) {
-        link.classList.add('active');
-      } else if (page === 'index.html' && href === '/') {
+      const linkPath = new URL(link.href, window.location.href).pathname.replace(/\/+$/, '') || '/';
+      if (linkPath === currentPath) {
         link.classList.add('active');
       }
     });
