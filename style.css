@@ -210,6 +210,26 @@ a:hover {
   z-index: 1;
 }
 
+.support-banner {
+  display: block;
+  width: min(100%, 560px);
+  margin: 2rem auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.support-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.support-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .avatar {
   width: 100px;
   height: 100px;
